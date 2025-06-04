@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check if an argument was provided
+if [ $# -eq 0 ]; then
+  exit 0
+fi
+
+# Store the AppImage file path (first argument)
+appmage="$1"
+
+#Shift to remove the first argument, leaving any additional arguments
+shift
+
+# Execute the distrobox command with the provided AppImage file
+distrobox-enter -n appimage -- bash -c "chmod +x $appimage; $appimage $@"
