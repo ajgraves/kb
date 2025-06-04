@@ -1,0 +1,10 @@
+#!/bin/bash
+
+printf "\n\nShowing logs from transactional-update.service\n\n"
+sudo journalctl -u transactional-update.service --no-pager --since=today
+
+printf "\n\nShowing logs from health-checker.service\n\n"
+sudo journalctl -u health-checker.service --no-pager --since=today
+
+printf "\n\nChecking if reboot is needed\n\n"
+sudo rebootmgrctl status
