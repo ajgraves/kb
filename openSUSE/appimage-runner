@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
 fi
 
 # Store the AppImage file path (first argument)
-appmage="$1"
+appimage="$1"
 
 #Shift to remove the first argument, leaving any additional arguments
 shift
